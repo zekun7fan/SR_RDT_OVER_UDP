@@ -131,12 +131,13 @@ public class Sender {
             } else if (type == 2) {
                 logger.logAckEOT(true);
                 receiveEOT = true;
-                if (senderWindow.isEmpty()) {
-                    close();
-                    break;
-                }
+                break;
             }
         }
+        while (!receiveEOT || !senderWindow.isEmpty()){
+            // wait sender window to be empty
+        }
+        close();
     }
 
     /**
