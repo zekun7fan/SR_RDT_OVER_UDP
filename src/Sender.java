@@ -111,7 +111,7 @@ public class Sender {
      * @throws IOException
      */
     public void listen() throws IOException {
-        while (!receiveEOT) {
+        while (!receiveEOT || !senderWindow.isEmpty()) {
             receiveSocket.receive(rPacket);
             byte[] bytes = rPacket.getData();
             JPacket packet = SerializeUtils.toPacket(bytes, rPacket.getLength());
@@ -132,9 +132,6 @@ public class Sender {
                 logger.logAckEOT(true);
                 receiveEOT = true;
             }
-        }
-        while (!senderWindow.isEmpty()){
-            // wait sender window to be empty
         }
         close();
     }
