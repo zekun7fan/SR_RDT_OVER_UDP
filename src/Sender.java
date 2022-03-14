@@ -137,6 +137,7 @@ public class Sender {
                 receiveEOT = true;
             }
         }
+        System.out.println("ready to close");
         close();
     }
 
