@@ -112,6 +112,10 @@ public class Sender {
      */
     public void listen() throws IOException {
         while (!receiveEOT || !senderWindow.isEmpty()) {
+            System.out.println("receiveEOT");
+            System.out.println(receiveEOT);
+            System.out.println("senderWindow");
+            System.out.println(senderWindow.isEmpty());
             receiveSocket.receive(rPacket);
             byte[] bytes = rPacket.getData();
             JPacket packet = SerializeUtils.toPacket(bytes, rPacket.getLength());
