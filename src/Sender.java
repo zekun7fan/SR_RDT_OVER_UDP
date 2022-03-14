@@ -112,10 +112,6 @@ public class Sender {
      */
     public void listen() throws IOException {
         while (!receiveEOT || !senderWindow.isEmpty()) {
-            System.out.println("receiveEOT");
-            System.out.println(receiveEOT);
-            System.out.println("senderWindow");
-            System.out.println(senderWindow.isEmpty());
             receiveSocket.receive(rPacket);
             byte[] bytes = rPacket.getData();
             JPacket packet = SerializeUtils.toPacket(bytes, rPacket.getLength());
@@ -137,7 +133,6 @@ public class Sender {
                 receiveEOT = true;
             }
         }
-        System.out.println("ready to close");
         close();
     }
 
@@ -157,7 +152,6 @@ public class Sender {
         Sender sender = new Sender(args[0], args[1], args[2], args[3], args[4]);
         sender.sendNewPacket();
         sender.listen();
-        System.out.println("main close");
         System.exit(0);
     }
 }
