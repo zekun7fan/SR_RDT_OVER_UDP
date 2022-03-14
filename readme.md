@@ -1,8 +1,8 @@
 # 1.how to start
 
-### step1: run `make clean`
+### step1: run `make clean` to delete class files, log files and text files.
 
-### step2: run `make`
+### step2: run `make` to compile the program
 
 ### step3: place the file to be transfer under the `out` directory 
 

@@ -26,4 +26,4 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 clean:
-		$(RM) out/*.class out/*.log
+		$(RM) out/*.class out/*.log out/*.txt
