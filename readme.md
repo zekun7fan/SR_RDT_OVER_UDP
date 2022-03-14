@@ -42,4 +42,39 @@
 
 # 2.test results
 
+* test case1: 
+    sender, receiver location: ubuntu2004-008.student.cs.uwaterloo.ca
+    sender and receiver are connected directly
+    file to send: send.txt
+    receiver.sh arguments: ./receiver.sh localhost 40001 40002 rectest1.txt
+    sender.sh arguments: ./sender.sh localhost 40002 40001 50 send.txt
+
+* test case2: 
+    emulator, sender, receiver location: ubuntu2004-008.student.cs.uwaterloo.ca
+    file to send: send.txt
+    emulator.sh arguments: ./emulator.sh 40002 localhost 40004 40003 localhost 40001 100 0.1 0
+    receiver.sh arguments: ./receiver.sh localhost 40003 40004 rectest2.txt
+    sender.sh arguments: ./sender.sh localhost 40002 40001 100 send.txt
+
+
+* test case3:
+  emulator location: ubuntu2004-008.student.cs.uwaterloo.ca
+  receiver location: ubuntu2004-010.student.cs.uwaterloo.ca
+  sender location: ubuntu2004-012.student.cs.uwaterloo.ca
+  file to send: send.txt
+  emulator.sh arguments: ./emulator.sh 40002 ubuntu2004-010.student.cs.uwaterloo.ca 40004 40003 ubuntu2004-012.student.cs.uwaterloo.ca 40001 100 0.1 0
+  receiver.sh arguments: ./receiver.sh ubuntu2004-008.student.cs.uwaterloo.ca 40003 40004 rectest3.txt
+  sender.sh arguments: ./sender.sh ubuntu2004-008.student.cs.uwaterloo.ca 40002 40001 100 send.txt
+
+
+
+* test case4:
+  emulator, sender, receiver location: ubuntu2004-008.student.cs.uwaterloo.ca
+  file to send: send.txt
+  emulator.sh arguments: ./emulator.sh 40002 localhost 40004 40003 localhost 40001 100 0.1 0
+  receiver.sh arguments: ./receiver.sh localhost 40003 40004 rectest2.txt
+  sender.sh arguments: ./sender.sh localhost 40002 40001 100 send.txt
+
+
+
 

@@ -189,7 +189,6 @@ class SenderWindow {
      */
     private void retransmit(JPacket packet) {
         byte[] bytes = SerializeUtils.toBytes(packet);
-        System.out.println("retransmit bytes len : " + bytes.length);
         try {
             sendSocket.send(new DatagramPacket(bytes, bytes.length, nEmulatorAddr));
         } catch (IOException e) {

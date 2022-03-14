@@ -8,7 +8,7 @@ import java.util.TimerTask;
  */
 class MyTimer {
 
-    private final Timer timer;
+    private Timer timer;
 
     private final Integer timeout;
 
@@ -42,6 +42,7 @@ class MyTimer {
 
 
     private void setTimer() {
+        this.timer = new Timer();
         needRetransmit = true;
         this.timer.schedule(new TimerTask() {
             @Override
@@ -59,6 +60,8 @@ class MyTimer {
     public void cancel() {
         needRetransmit = false;
         timer.cancel();
+        timer.purge();
+        this.timer = null;
     }
 
     public boolean isNeedRetransmit() {
