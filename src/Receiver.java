@@ -187,6 +187,7 @@ public class Receiver {
     public static void main(String[] args) throws IOException {
         Receiver receiver = new Receiver(args[0], args[1], args[2], args[3]);
         receiver.listen();
+        System.exit(0);
     }
 
 

@@ -158,6 +158,7 @@ public class Sender {
         sender.sendNewPacket();
         sender.listen();
         System.out.println("main close");
+        System.exit(0);
     }
 }
 
