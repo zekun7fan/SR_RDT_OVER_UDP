@@ -1,3 +1,6 @@
+/**
+ * sent but not acked packet which is buffered in the sender window
+ */
 class SentPacket {
     // associated timer
     private final MyTimer myTimer;

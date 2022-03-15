@@ -42,23 +42,19 @@ class SenderWindow {
             this.logger.logWindowSize(1, true);
         } catch (IOException e) {
             System.err.println("error occur when log the initial size of sender window");
-            return;
         }
     }
 
 
     /**
-     * increase size, up tp 10
+     * attempt to increase size, up tp 10
      *
-     * @return whether successfully increase size
      */
-    public boolean increaseSize() throws IOException {
+    public void increaseSize() throws IOException {
         if (size < MAX_SIZE) {
             size++;
             logger.logWindowSize(size, true);
-            return true;
         }
-        return false;
     }
 
     /**

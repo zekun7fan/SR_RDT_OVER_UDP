@@ -41,6 +41,9 @@ class MyTimer {
     }
 
 
+    /**
+     * set timer and start scheduled task
+     */
     private void setTimer() {
         this.timer = new Timer();
         needRetransmit = true;
@@ -57,6 +60,9 @@ class MyTimer {
         }, timeout);
     }
 
+    /**
+     * cancel timer
+     */
     public void cancel() {
         needRetransmit = false;
         timer.cancel();
