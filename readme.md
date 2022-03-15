@@ -69,11 +69,14 @@
 
 
 * test case4:
-  emulator, sender, receiver location: ubuntu2004-008.student.cs.uwaterloo.ca
+  emulator location: ubuntu2004-008.student.cs.uwaterloo.ca
+  receiver location: ubuntu2004-010.student.cs.uwaterloo.ca
+  sender location: ubuntu2004-012.student.cs.uwaterloo.ca
   file to send: send.txt
-  emulator.sh arguments: ./emulator.sh 40002 localhost 40004 40003 localhost 40001 100 0.1 0
-  receiver.sh arguments: ./receiver.sh localhost 40003 40004 rectest2.txt
-  sender.sh arguments: ./sender.sh localhost 40002 40001 100 send.txt
+  emulator.sh arguments: ./emulator.sh 40002 ubuntu2004-010.student.cs.uwaterloo.ca 40004 40003 ubuntu2004-012.student.cs.uwaterloo.ca 40001 100 0.5 0
+  receiver.sh arguments: ./receiver.sh ubuntu2004-008.student.cs.uwaterloo.ca 40003 40004 rectest3.txt
+  sender.sh arguments: ./sender.sh ubuntu2004-008.student.cs.uwaterloo.ca 40002 40001 20 send.txt
+
 
 
 
