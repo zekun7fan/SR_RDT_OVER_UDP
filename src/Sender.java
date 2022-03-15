@@ -124,10 +124,6 @@ public class Sender {
                 for (int i = 0; i < num; i++) {
                     sendNewPacket();
                 }
-//                if (sendEOT && receiveEOT && senderWindow.isEmpty()) {
-//                    close();
-//                    break;
-//                }
                 // EOT
             } else if (type == 2) {
                 logger.logAckEOT(true);

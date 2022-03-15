@@ -151,9 +151,13 @@ class SenderWindow {
      * @param packet
      */
     public void buffer(JPacket packet) {
-        assert num < size;
+        if (num >= size){
+            return;
+        }
         int index = (headIndex + num) % MAX_SIZE;
-        assert window[index] == null;
+        if (window[index] != null){
+            return;
+        }
         SentPacket sentPacket = new SentPacket(packet, timeout, index, this);
         window[index] = sentPacket;
         sentPacket.getMyTimer().start();
@@ -169,6 +173,9 @@ class SenderWindow {
     public synchronized void retransmit(int index) throws IOException {
         size = 1;
         SentPacket sentPacket = window[index];
+        if (sentPacket == null){
+            return;
+        }
         if (headIndex == index) {
             // retransmit packet and reset timer
             JPacket packet = sentPacket.getPacket();
