@@ -37,6 +37,7 @@ public class Sender {
     // whether sender has sent EOT to receiver
     private boolean sendEOT;
 
+    // logger
     private SenderLogger logger;
 
     public Sender(String nEmulatorHost, String nEmulatorPort, String localReceivePort, String timeout, String fileToTransfer) {

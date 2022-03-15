@@ -35,6 +35,7 @@ public class Receiver {
     // the next smallest seqnum
     private int nextSeq;
 
+    // logger
     private ReceiverLogger logger;
 
 

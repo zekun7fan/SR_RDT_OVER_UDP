@@ -4,7 +4,7 @@
 
 ### step2: run `make` to compile the program
 
-### step3: place the file to be transfer under the `out` directory 
+### step3: place the file to be transfer under the `out` directory because all text files will be deleted everytime after executing `make clean` 
 
 ### step4: run the shell script in the following order and pass according arguments
 
@@ -74,7 +74,7 @@
   sender location: ubuntu2004-012.student.cs.uwaterloo.ca
   file to send: send.txt
   emulator.sh arguments: ./emulator.sh 40002 ubuntu2004-010.student.cs.uwaterloo.ca 40004 40003 ubuntu2004-012.student.cs.uwaterloo.ca 40001 100 0.5 0
-  receiver.sh arguments: ./receiver.sh ubuntu2004-008.student.cs.uwaterloo.ca 40003 40004 rectest3.txt
+  receiver.sh arguments: ./receiver.sh ubuntu2004-008.student.cs.uwaterloo.ca 40003 40004 rectest4.txt
   sender.sh arguments: ./sender.sh ubuntu2004-008.student.cs.uwaterloo.ca 40002 40001 20 send.txt
 
 

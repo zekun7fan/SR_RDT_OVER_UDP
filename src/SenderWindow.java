@@ -137,6 +137,9 @@ class SenderWindow {
     }
 
 
+    /**
+     * close associated resources
+     */
     protected void close() {
         sendSocket.close();
     }
